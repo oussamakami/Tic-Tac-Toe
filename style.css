@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 2vw;
+}
+:root {
+  --primary-color: #0e0e0e;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: var(--primary-color);
+  display: grid;
+  grid-template-columns: minmax(0, 400px) minmax(420px, 1fr) minmax(0, 400px);
+  grid-template-rows: minmax(0, 200px) auto minmax(0, 200px);
+}
+#main {
+  background-color: white;
+  grid-area: 2/2;
+  text-align: center;
+}
+#title {
+  font-size: 1rem;
+  font-family: "Days One", sans-serif;
+  margin: auto;
+  display: inline-block;
+}
+#title > h5 {
+  font-family: "Acme", sans-serif;
+  font-size: .6rem;
+  float: right;
+  transform: rotate(-12deg);
+  margin-top: -5px;
+  margin-right: -2rem;
+}
