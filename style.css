@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #fff;
 }
 html {
   font-size: 2vw;
@@ -17,13 +18,12 @@ body {
   overflow: hidden;
   background-color: var(--primary-color);
   display: grid;
-  grid-template-columns: minmax(0, 400px) minmax(420px, 1fr) minmax(0, 400px);
-  grid-template-rows: minmax(0, 200px) auto minmax(0, 200px);
+  place-content: center;
 }
 #main {
-  background-color: white;
-  grid-area: 2/2;
   text-align: center;
+  width: 50vw;
+  height: 25vh;
 }
 #title {
   font-size: 1rem;
@@ -38,4 +38,34 @@ body {
   transform: rotate(-12deg);
   margin-top: -5px;
   margin-right: -2rem;
+}
+#buttons {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+button {
+  background-color: var(--primary-color);
+  padding: 10px 25px;
+  font-size: .5rem;
+  border: 1px solid #fff;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+button:nth-child(1) {
+  position: relative;
+  cursor: not-allowed;
+}
+.flag {
+  position: absolute;
+  background-color: #f00;
+  transform: rotate(-20deg);
+  left: -5px;
+  padding: 5px 28px;
+  top: -2px;
+  border-radius: 5px;
+  font-size: .8rem;
+  cursor: not-allowed;
 }
