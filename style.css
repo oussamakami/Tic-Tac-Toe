@@ -15,6 +15,7 @@ html {
 }
 :root {
   --primary-color: #0e0e0e;
+  --door-color: #000;
 }
 body {
   height: 100vh;
@@ -83,4 +84,16 @@ button:last-child:hover {
   border-radius: 5px;
   font-size: .8rem;
   cursor: not-allowed;
+}
+#door {
+  background-color: var(--door-color);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  left: -100vw;
+  z-index: 500;
+  transition: .5s all ease-in-out;
+}
+.closeDoor {
+  left: 0 !important;
 }
