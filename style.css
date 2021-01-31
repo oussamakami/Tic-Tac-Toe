@@ -5,6 +5,10 @@
   padding: 0;
   box-sizing: border-box;
   color: #fff;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 html {
   font-size: 2vw;
@@ -22,13 +26,14 @@ body {
 }
 #main {
   text-align: center;
-  width: 50vw;
-  height: 25vh;
+}
+#home {
+  padding: 20px;
 }
 #title {
   font-size: 1rem;
   font-family: "Days One", sans-serif;
-  margin: auto;
+  margin: 30px auto 60px;
   display: inline-block;
 }
 #title > h5 {
@@ -45,6 +50,11 @@ body {
   justify-content: space-evenly;
   align-items: center;
 }
+#buttons > h3 {
+  font-family: "Acme", sans-serif;
+  font-size: 1.6rem;
+  margin: 0 30px;
+}
 button {
   background-color: var(--primary-color);
   padding: 10px 25px;
@@ -53,15 +63,20 @@ button {
   outline: none;
   cursor: pointer;
   border-radius: 5px;
+  transition: .3s all ease;
 }
 button:nth-child(1) {
   position: relative;
   cursor: not-allowed;
 }
+button:last-child:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+}
 .flag {
   position: absolute;
   background-color: #f00;
-  transform: rotate(-20deg);
+  transform: rotate(-14deg);
   left: -5px;
   padding: 5px 28px;
   top: -2px;
